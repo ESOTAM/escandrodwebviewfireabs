@@ -72,7 +72,7 @@
         </div>
         <div class="col-md-6">
           <img class="d-block img-fluid" src="https://www.chiquipedia.com/imagenes/imagenes-animo09.jpg" id="idfoto">
-          <iframe height="315" src="https://www.youtube.com/embed/zm6FBe8OWbI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" width="560" id="idmapauno"></iframe>
+          <iframe height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" width="560" id="idmapauno"></iframe>
         </div>
       </div>
     </div>
@@ -84,11 +84,12 @@
           <form class="">
             <div class="form-group"> <label>Mensaje premiero</label>
               <input type="text" class="form-control" placeholder="msn" id="idmesauno"> <small class="form-text text-muted">Todo posible por Estructuras software  Y Tecnologia Ambiental:      ingeniero  Giovanni Ernesto Rodrigues Diaz</small> </div>
+
             <div class="form-group"> <label>Mensaje segundo</label>
               <input type="text" class="form-control" placeholder="msn" id="idmesados"> </div>
           </form>
           <button onclick="hablarandroid()" class="btn btn-primary">Click me</button>
-          <button onclick="enviardato()" class="btn btn-primary">dato</button>
+           <button onclick="mesados()" class="btn btn-primary">mensaje dos</button>
         </div>
       </div>
     </div>
@@ -183,22 +184,34 @@ var mi="888";
   });
        
 
-        firebase.database().ref().child("foto").on('change', function(dataSnapshot) {location.reload();alert(777777); });
+   //     firebase.database().ref().child("foto").on('change', function(dataSnapshot) {location.reload();alert(777777); });
     
-    
-    function  enviardato(){
-var st=document.getElementById("idmesados").value;
-      firebase.database().ref().child("carrocuatro").child("nombre").set(st);
-    }
         
         
+        firebase.database().ref().child("dos").set(String("jodete"));
+        // firebase.database().ref().child("uno").set("acasubiendo");
         
         function hablarandroid(){
          
-var mensageuno=document.getElementById("idmesauno").value;
-firebase.database().ref().child("uno").set(String(mensageuno));
+var mensajeuno=document.getElementById("idmesauno").value;
+firebase.database().ref().child("uno").set(String(mensajeuno));
 //alert(String(mensageuno));
        console.log("mi boton");}
+
+
+function mesados(){
+         
+var mensajedoso=document.getElementById("idmesados").value;
+firebase.database().ref().child("dos").set(String(mensajedoso));
+//alert(String(mensageuno));
+       console.log("mi boton");}
+
+
+
+
+
+
+
   </script>
   <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:180px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;
     <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
